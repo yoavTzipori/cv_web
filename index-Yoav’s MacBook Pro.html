@@ -46,8 +46,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link smoothScroll">Contact</a>
+                      <a href="#skills" class="nav-link smoothScroll">skills</a>
                     </li>
+                    <li class="nav-item">
+                      <a href="#experience" class="nav-link smoothScroll">experience</a>
+                  </li>
                 </ul>
 
                 <div class="mt-lg-0 mt-3 mb-4 mb-lg-0">
@@ -157,7 +160,7 @@
                       <p>I hold IT and CCNA certifications, which have provided me with a strong foundation in networking. I possess extensive knowledge of networking concepts, including ports, communication protocols, switches, hubs, routers, and more. Understanding how packets are delivered in a network and being familiar with packet sniffing techniques allows me to troubleshoot and optimize network performance effectively. I am well-versed in broadcast domains and possess a comprehensive understanding of various networking technologies. With my expertise, I am equipped to design, configure, and maintain robust and efficient network infrastructures.</p>
                     </div>
 
-                    <div class="col-lg-6 col-md-6 col-12">
+                    <div id="experience" class="col-lg-6 col-md-6 col-12">
                       <h2>job experience</h2>
                       <h4 class="mb-4">inventory Manager</h4>
                       
@@ -228,7 +231,7 @@
   <body>
     <div class="skills-container">
 
-      <div class="skill-category">
+      <div id="skills" class="skill-category">
         <h2>General Skills</h2>
         <div class="skill-list">
           <div class="skill-list-item">Fast Learner</div>
@@ -264,10 +267,10 @@
   </body>
   </html>
 
-  <!DOCTYPE html>
+  <<!DOCTYPE html>
   <html>
   <head>
-    <title>Contact Me Div</title>
+    <title>Contact Me and Certificate Divs</title>
     <style>
       /* Styling for the Contact Me div */
       .contact-me {
@@ -328,14 +331,110 @@
         width: 50px;
         height: 50px;
       }
+  
+      /* Styling for the Certificate section */
+      .certificate-section {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        opacity: 0.5; /* Default low opacity */
+        transition: opacity 0.3s ease; /* Add a transition effect */
+      }
+  
+      /* On hover, increase the opacity */
+      .certificate-section:hover {
+        opacity: 1;
+      }
+  
+      /* Styling for the close button */
+      .certificate-section .close-btn {
+        float: right;
+        cursor: pointer;
+      }
+  
+      /* Styling for the certificate images */
+      .certificate-images {
+        display: flex;
+        margin-top: 10px;
+      }
+  
+      .certificate-images img {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+      }
     </style>
   </head>
   <body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <!-- Your existing head section code -->
+    
+      <!-- Lightbox library -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    </head>
+    <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+    
+      <!-- Your existing content, including the navigation bar and other sections -->
+    
+      <!-- Certificate Section -->
+      <div class="certificate-section">
+        <span class="close-btn" onclick="closeCertificateSection()">X</span>
+        <h2>Certificates</h2>
+        <div class="certificate-images">
+          <!-- Certificate Image 1 -->
+          <a href="images/PT.png" data-lightbox="certificates" data-title="Certificate 1">
+            <img src="images/PT.png" alt="PT">
+          </a>
+    
+          <!-- Certificate Image 2 -->
+          <a href="images/CCNAJPG.JPG" data-lightbox="certificates" data-title="Certificate 2">
+            <img src="images/CCNAJPG.JPG" alt="CCNA">
+          </a>
+    
+          <!-- Certificate Image 3 -->
+          <a href="images/IT.JPG" data-lightbox="certificates" data-title="Certificate 3">
+            <img src="images/IT.JPG" alt="IT">
+          </a>
+    
+          <!-- Certificate Image 4 -->
+          <a href="images/certificate4-fullscreen.jpg" data-lightbox="certificates" data-title="Certificate 4">
+            <img src="images/certificate4-thumbnail.jpg" alt="CEH">
+          </a>
+        </div>
+      </div>
+    
+      <!-- Your existing contact me, footer, and scripts sections -->
+    
+      <!-- Lightbox library -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+      
+      <script>
+        // Function to close the Certificate section when an image is clicked
+        document.addEventListener('click', function(event) {
+          if (event.target.tagName === 'IMG' && event.target.closest('.certificate-images')) {
+            closeCertificateSection();
+          }
+        });
+      </script>
+    </body>
+    </html>
+    
+    </div>
+  
     <!-- Contact Me Div -->
     <div class="contact-me">
       <span class="close-btn" onclick="closeContactMe()">X</span>
       <p>Email:<a href="mailto:yt@yoavtzipori.com">yt@yoavtzipori.com</a></p>
-      
+  
       <p>Phone: 0544401585</p>
   
       <!-- Social Media Section -->
@@ -352,10 +451,11 @@
             <img src="images/linkedin-logo.png" alt="LinkedIn" width="50" height="50">
           </a>
         </div>
+  
       </section>
     </div>
   
-    <!-- Your other HTML content goes here -->
+  
   
     <script>
       // JavaScript function to close the Contact Me div
@@ -363,20 +463,74 @@
         document.querySelector('.contact-me').style.display = 'none';
       }
     </script>
+    
+    
+  </body>
+  
+  </html>
+    
   </body>
   </html>
   
 
 
-
-
     </section>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yoav Resume - Profile HTML Page</title>
+  <!-- Your existing styles -->
+</head>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+  <!-- MENU BAR -->
+  <!-- Your existing navigation bar code -->
+
+  <!-- HERO -->
+  <!-- Your existing hero section code -->
+
+  <!-- About Section -->
+  <section class="about section-padding" id="about">
+    <!-- Your existing about section code -->
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills section-padding" id="skills">
+    <!-- Your existing skills section code -->
+  </section>
+
+  <!-- Job Experience Section -->
+  <section class="job-experience section-padding" id="experience">
+    <!-- Your existing job experience section code -->
+  </section>
+
+  <!-- Certificate Section -->
+  <div class="certificate-section">
+    <!-- Your existing certificate section code -->
+  </div>
+
+  <!-- Contact Me Div -->
+  <div class="contact-me">
+    <!-- Your existing contact me section code -->
+  </div>
+
+  <!-- Footer Section -->
+  <footer style="background-color: #333; color: #fff; text-align: center; padding: 20px;">
+    <p>Author: Yoav Tzipori</p>
+    <p>&copy; 2023 All rights reserved.</p>
+  </footer>
+
+  <!-- Your existing scripts -->
+</body>
+</html>
+
      <!-- SCRIPTS -->
      <script src="js/jquery.min.js"></script>
      <script src="js/bootstrap.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/custom.js"></script>
+    
 
 </body>
 </html>
