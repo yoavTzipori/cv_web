@@ -1,9 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- here i needd to add the pop up window-->
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Your existing head section code -->
+
+  <style>
+    /* Popup styles */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 9999; /* Adjust z-index as needed */
+    }
+  </style>
+
+  <!-- Your existing stylesheets and scripts -->
+</head>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+  <!-- Your existing content, including navigation bar and other sections -->
+
+  <!-- Popup window -->
+  <div class="popup" id="myPopup">
+    <p>Welcome to Yoav Tzipori's website.</p>
+    <p>For the best experience, please view it on a computer.</p>
+  </div>
+
+  <!-- Your existing scripts -->
+  <script>
+    // Function to hide the popup after 4 seconds
+    function hidePopup() {
+      var popup = document.getElementById("myPopup");
+      popup.style.display = "none";
+    }
+
+    // Hide the popup after 4 seconds
+    setTimeout(hidePopup, 4000);
+  </script>
+</body>
+</html>
+
+  
+  
      <!-- Your existing head section code -->
 
      <!-- Add viewport meta tag for responsiveness -->
@@ -25,6 +79,7 @@
          }
      </style>
 </head>
+
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
 
     <!-- Your existing content, including navigation bar, hero section, and other sections -->
@@ -33,6 +88,18 @@
 
 </body>
 </html>
+<style>
+  /* Styles for the first div with background image */
+  #intro {
+      background-image: url('images/t1.jpg');
+      background-size: cover; /* Adjust this to 'contain' if you don't want the image to cover the entire div */
+      background-position: center center;
+      background-repeat: no-repeat;
+      padding: 50px; /* Add some padding to create space between the content and the background image */
+      color: #fff; /* Add text color to ensure content is visible against the background */
+  }
+</style>
+
 
 
      <title>Yoav resume - Profile HTML Page</title>
@@ -554,6 +621,7 @@
   </footer>
 
   <!-- Your existing scripts -->
+  
 </body>
 </html>
 
@@ -564,6 +632,7 @@
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/custom.js"></script>
     
+     
 
 </body>
 </html>
