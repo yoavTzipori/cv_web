@@ -169,6 +169,10 @@
                     <li class="nav-item">
                         <a href="#intro" class="nav-link smoothScroll">Introduction</a>
                     </li>
+                    <li class="nav-item">
+                      <!-- When this button is clicked, it will call the showCertificateSection() function -->
+                      <a href="#about" class="nav-link smoothScroll" onclick="showCertificateSection()">certificate</a>
+                    </li>
 
                     <li class="nav-item">
                         <a href="#about" class="nav-link smoothScroll">About Me</a>
@@ -515,45 +519,49 @@
       <!-- Your existing content, including the navigation bar and other sections -->
     
       <!-- Certificate Section -->
-      <div class="certificate-section">
-        <span class="close-btn" onclick="closeCertificateSection()">X</span>
-        <h2>Certificates</h2>
-        <div class="certificate-images">
-          <!-- Certificate Image 1 -->
-          <a href="images/PT.png" data-lightbox="certificates" data-title="Certificate 1">
-            <img src="images/PT.png" alt="PT">
-          </a>
-    
-          <!-- Certificate Image 2 -->
-          <a href="images/CCNAJPG.JPG" data-lightbox="certificates" data-title="Certificate 2">
-            <img src="images/CCNAJPG.JPG" alt="CCNA">
-          </a>
-    
-          <!-- Certificate Image 3 -->
-          <a href="images/IT.JPG" data-lightbox="certificates" data-title="Certificate 3">
-            <img src="images/IT.JPG" alt="IT">
-          </a>
-    
-          <!-- Certificate Image 4 -->
-          <a href="images/certificate4-fullscreen.jpg" data-lightbox="certificates" data-title="Certificate 4">
-            <img src="images/certificate4-thumbnail.jpg" alt="CEH">
-          </a>
-        </div>
-      </div>
-    
-      <!-- Your existing contact me, footer, and scripts sections -->
-    
-      <!-- Lightbox library -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
       
-      <script>
-        // Function to close the Certificate section when an image is clicked
-        document.addEventListener('click', function(event) {
-          if (event.target.tagName === 'IMG' && event.target.closest('.certificate-images')) {
-            closeCertificateSection();
-          }
-        });
-      </script>
+  <!-- Certificate Section -->
+  <div class="certificate-section" style="display: none;">
+    <span class="close-btn" onclick="closeCertificateSection()">X</span>
+    <h2>Certificates</h2>
+    <div class="certificate-images">
+      <!-- Certificate Image 1 -->
+      <a href="images/PT.png" data-lightbox="certificates" data-title="Certificate 1">
+        <img src="images/PT.png" alt="PT">
+      </a>
+
+      <!-- Certificate Image 2 -->
+      <a href="images/CCNAJPG.JPG" data-lightbox="certificates" data-title="Certificate 2">
+        <img src="images/CCNAJPG.JPG" alt="CCNA">
+      </a>
+
+      <!-- Certificate Image 3 -->
+      <a href="images/IT.JPG" data-lightbox="certificates" data-title="Certificate 3">
+        <img src="images/IT.JPG" alt="IT">
+      </a>
+
+      <!-- Certificate Image 4 -->
+      <a href="images/certificate4-fullscreen.jpg" data-lightbox="certificates" data-title="Certificate 4">
+        <img src="images/certificate4-thumbnail.jpg" alt="CEH">
+      </a>
+    </div>
+    <script>
+      function showCertificateSection() {
+        // Find the "certificate-section" div
+        var certificateSection = document.querySelector(".certificate-section");
+        // Set its display style to "block" to show it
+        certificateSection.style.display = "block";
+      }
+    
+      function closeCertificateSection() {
+        // Find the "certificate-section" div
+        var certificateSection = document.querySelector(".certificate-section");
+        // Set its display style to "none" to hide it
+        certificateSection.style.display = "none";
+      }
+    </script>
+    
+  </div>
     </body>
     </html>
     
